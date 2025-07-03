@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-# Ignore Python virtual environment
-venv/
-
-# Ignore environment variables file
 .env
-
-# Ignore Python cache files
 __pycache__/
 *.pyc
-*.pyo
-
-# Ignore IDE or editor specific files
-.vscode/
-.idea/
-*.swp
-
-# Ignore macOS system files
 .DS_Store
-
-# Ignore logs and temporary files
-*.log
-*.tmp
-=======
