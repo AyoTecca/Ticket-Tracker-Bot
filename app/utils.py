@@ -23,8 +23,8 @@ def send_telegram_message(message):
 # Check for tickets
 def check_tickets():
     urls = {
-        "30.12.2024": [
-            "https://bilet.railways.kz/sale/default/route/search?route_search_form%5BdepartureStation%5D=2700000&route_search_form%5BarrivalStation%5D=2700770&route_search_form%5BforwardDepartureDate%5D=30-12-2024",
+        "04.07.2025": [
+            "https://bilet.railways.kz/sale/default/route/search?route_search_form%5BdepartureStation%5D=2700770&route_search_form%5BarrivalStation%5D=2708001&route_search_form%5BforwardDepartureDate%5D=04-07-2025%2C+%D0%BF%D1%82%D0%BD&route_search_form%5BbackwardDepartureDate%5D=04-07-2025",
         ],
     }
     headers = {"User-Agent": "Mozilla/5.0"}
