@@ -11,14 +11,22 @@ CHAT_ID = os.getenv("CHAT_ID")
 if not TELEGRAM_TOKEN or not CHAT_ID:
     raise ValueError("TELEGRAM_TOKEN and CHAT_ID must be set!")
 
-# Send a message to Telegram
 def send_telegram_message(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     payload = {"chat_id": CHAT_ID, "text": message}
     try:
-        requests.post(url, json=payload)
+        response = requests.post(url, json=payload)
+        print(f"Telegram API response: {response.status_code}, {response.text}")
+        
+        # Add detailed error logging
+        if response.status_code != 200:
+            error_msg = f"❌ Telegram error {response.status_code}: {response.text}"
+            print(error_msg)
+        else:
+            print("✅ Message sent to Telegram successfully")
+            
     except Exception as e:
-        print(f"Failed to send Telegram message: {e}")
+        print(f"🔥 Failed to send Telegram message: {str(e)}")
 
 # Check for tickets
 def check_tickets():
